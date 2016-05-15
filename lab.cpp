@@ -1,3 +1,7 @@
+#include <iostream>
+#include <map>
+#include <vector>
+using namespace std;
 int main () 
 {
 	vector<multimap<int, int>*[6]> isec;
