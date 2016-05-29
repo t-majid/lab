@@ -18,7 +18,9 @@ class ietat
 {
 public:
 	friend void helloo(ietat& o);
+	ietat(){}
 	ietat(int d, int c):a(d),b(c), bitm(0x00){}
+	ietat(const ietat& o){}
 	~ietat(){}
 	bool cmp_state(ietat& od){
 		if(od.a != a)
