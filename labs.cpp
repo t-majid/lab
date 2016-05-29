@@ -10,7 +10,7 @@
 
 #include <unistd.h>
 #include "msg.h"
-#include "stock.h"
+
 using namespace std;
 
 
