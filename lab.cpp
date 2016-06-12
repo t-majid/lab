@@ -31,7 +31,7 @@ void hh()
 		#pragma omp parallel for
 		for(int i=0;i<100;++i)
 		{
-			#pragma omp parallel for
+			// #pragma omp parallel for
 			for (int j=0;j<6;++j)
 				isec[i][j]=NULL;
 		}
@@ -88,7 +88,7 @@ void destruct()
 #pragma omp parallel for
 	for(int i=0;i<100;++i)
 	{
-	#pragma omp parallel for
+	// #pragma omp parallel for
 		for (int j=0;j<6;++j)
 		{
 			if(isec[i][j]!= NULL)
@@ -107,7 +107,7 @@ void display()
 #pragma omp parallel for
 	for(int i=0;i<100;++i)
 	{
-		#pragma omp parallel for
+		// #pragma omp parallel for
 		for (int j=0;j<6;++j)
 		{
 
@@ -162,7 +162,8 @@ cout << startNs << endl;
 	if(isec[0][0]!=NULL)
 		cout << isec[0][0]->size()<<endl;
 	display();
-	destruct();
+
+	// destruct();
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end_time);
 
 
@@ -172,6 +173,6 @@ uint64_t diffMicro = diffNs / 1000;
 uint64_t diffSec = start_time.tv_sec - end_time.tv_sec;
 // std::cout.precision(12);
 std::cout.setf( std::ios::fixed, std:: ios::floatfield );
-cout << diffSec << " " << diffNs/1000 << endl;
+cout << diffSec << " " << endNs << endl;
 	return 0;
 }

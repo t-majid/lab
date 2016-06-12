@@ -68,3 +68,7 @@ private:
 	vector<ietat*> etati;
 	/* data */
 };
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
